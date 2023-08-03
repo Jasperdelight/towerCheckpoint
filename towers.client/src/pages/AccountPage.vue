@@ -25,13 +25,16 @@
 </template>
 
 <script>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { AppState } from '../AppState';
 import Pop from '../utils/Pop.js';
 import { logger } from '../utils/Logger.js';
 import { ticketsService } from '../services/TicketsService.js';
+import { accountService } from "../services/AccountService";
 export default {
   setup() {
+    const editable = ref({})
+
     return {
       account: computed(() => AppState.account),
       tickets: computed(()=> AppState.tickets),
@@ -48,6 +51,15 @@ export default {
         }
             await ticketsService.unAttendTower(ticketId)
             
+        } catch(error) {
+            Pop.error(error.message);
+            logger.log(error);
+        }
+      },
+      async editAccount(){
+        try{
+            const formData = editable.value
+            await accountService.editAccount(formData)
         } catch(error) {
             Pop.error(error.message);
             logger.log(error);
