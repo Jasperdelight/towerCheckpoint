@@ -19,3 +19,4 @@ TicketSchema.virtual('event', {
   justOne: true,
   ref: 'Tower'
 })
+  
