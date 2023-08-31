@@ -118,19 +118,19 @@ export default {
   --main-height: calc(100vh - 32px - 64px);
 }
 .main-color{
-  background-color: #530c0b;
+  background-color: #214939;
 }
 .secondary-color{
-  background-color: #54251d
+  background-color: #378A72
 }
 .danger-color{
-  background-color: #ba7438
+  background-color: #FECA50
 }
 .light-color{
-  background-color: #c6b273
+  background-color: #619e91
 }
 .lighter-color{
-  background-color: #c4c994
+  background-color: #a2b0c78c
 }
 
 
