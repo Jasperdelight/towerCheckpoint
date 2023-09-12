@@ -25,7 +25,7 @@
         </li>
         
       </ul>
-      <button type="button" class="btn danger-color me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button v-if="account.id" type="button" class="btn danger-color me-2 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Create Event
 </button>
 
@@ -37,10 +37,14 @@
 </template>
 
 <script>
+import { computed } from "vue";
 import Login from './Login.vue';
+import { AppState } from "../AppState";
 export default {
   setup() {
-    return {}
+    return {
+      account: computed(()=> AppState.account)
+    }
   },
   components: { Login }
 }

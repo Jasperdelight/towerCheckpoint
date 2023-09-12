@@ -14,7 +14,7 @@
 </section>
 
 <section class="row justify-content-center">
-  <div v-for="tower in towers" :key="tower.id" class="col-md-3 col-12 lighter-color card m-4">
+  <div v-for="tower in towers" :key="tower.id" class="col-md-3 col-12 lighter-color card m-4 d-flex justify-content-end">
     <TowerCard :tower="tower"/>
   </div>
 </section>

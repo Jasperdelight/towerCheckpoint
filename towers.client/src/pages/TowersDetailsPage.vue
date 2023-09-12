@@ -29,7 +29,7 @@
     <button v-if="account.id == activeTower.creatorId && activeTower.isCanceled == false" @click="archiveTower()" class="btn btn-danger"> Cancel Event</button>
   </section>
 
-  <h5  class="mb-0">Who's Going</h5>
+  <h5  class="mb-0 text-white">Who's Going</h5>
   <section class="row secondary-color rounded">
     <div class="col-12 d-flex">
 
@@ -42,7 +42,7 @@
   <section class="row justify-content-center" v-if="!activeTower?.isCanceled">
     <div class="col-md-10 col-12">
       <form @submit.prevent="createComment()">
-        <label for="comment">Comments</label>
+        <label for="comment" class="text-white">Comments</label>
         <textarea required v-model="editable.body" class="form-control" name="comment" id="comment" rows="3"></textarea>
         <div class="d-flex justify-content-end">
           <button class="btn btn-primary " type="submit">Post</button>
@@ -56,7 +56,7 @@
       <section class="row">
         <div class="col-md-4 col-6 d-flex justify-content-end pt-2">
           <img class="img-fluid ticket-img mt-2" :src="comment.creator.picture" alt="">
-          <h5 class="pt-2 ps-2">{{ comment.creator.name }}</h5>
+          <h5 class="pt-2 ps-2 text-white">{{ comment.creator.name }}</h5>
         </div>
         <div class="col-md-8 col-6 bg-light elevation-4 my-2 d-flex justify-content-between">
           

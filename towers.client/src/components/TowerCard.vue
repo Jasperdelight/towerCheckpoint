@@ -1,15 +1,15 @@
 <template>
   <div class="row text-center">
    
-    <div  class="col-12 fs-4">  <span class="text-danger" v-if="tower.isCanceled == true"> Canceled</span> {{ tower.name }} </div>
+    <div  class="col-12 fs-4 text-white">  <span class="text-danger" v-if="tower.isCanceled == true"> Canceled</span> {{ tower.name }} </div>
     <router-link :to="{ name: 'Tower', params: { eventId: tower.id }}">
-      <section class="row">
+
 
         <div class="col-12 pb-2">
         <img v-if="tower.isCanceled == false" class="img-fluid img rounded" :src="tower.coverImg" alt="">
         <img v-if="tower.isCanceled == true" class="img-fluid img canceled-img rounded" :src="tower.coverImg" alt="">
       </div>
-    </section>
+
     </router-link>
   </div>
 </template>
