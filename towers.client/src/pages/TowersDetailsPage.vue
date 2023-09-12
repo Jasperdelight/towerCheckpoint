@@ -4,9 +4,9 @@
     <div class="col-md-4 col-6">
       <img v-if="activeTower.isCanceled == false" class="img-fluid rounded mt-2" :src="activeTower.coverImg" alt="">
       <img v-else class="img-fluid canceled-img rounded mt-2" :src="activeTower.coverImg" alt="">
-      <div>Created At: {{ formatDate(activeTower.createdAt) }}</div>
+      <div class="text-white">Created At: {{ formatDate(activeTower.createdAt) }}</div>
     </div>
-    <div class="col-md-8 col-6">
+    <div class="col-md-8 col-6 text-white">
       <h1 class="text-danger" v-if="activeTower.isCanceled == true">Canceled</h1>
       <h2  > {{activeTower.name}}</h2>
       <p>{{activeTower.description}}</p>
@@ -30,7 +30,7 @@
   </section>
 
   <h5  class="mb-0 text-white">Who's Going</h5>
-  <section class="row secondary-color rounded">
+  <section class="row main-color rounded">
     <div class="col-12 d-flex">
 
       <div v-for="ticket in tickets" :key="ticket.id" class="py-1">
