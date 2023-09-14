@@ -1,16 +1,6 @@
-CodeWorks Vue Starter
+Towers
 =====================
-This template is designed to help get students started building vue applications
+This Application allows users to create events at a certain time and day with a limited number of tickets. Other users can attend this events which in turn takes away from the ticket count. Once a event has no more tickets users are unable to attend. The creator of the event can also cancel events. Users can comment on events as well.
 
-## Legal Overview
-
-The content under the CodeWorks®, LLC Organization and all of the individual repos are solely intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
-
----
-
-## Copyright
-
-© CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
-
-
-<img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
+====
+Utiilized Vue.js front end with node and express back end. Uses Auth0 as authentication service.
