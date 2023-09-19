@@ -7,23 +7,23 @@ function loadPage(page) {
 
 const routes = [
   {
-    path: '/',
+    path: 'tower/',
     name: 'Home',
     component: loadPage('HomePage')
   },
   {
-    path: '/about',
+    path: 'tower/about',
     name: 'About',
     component: loadPage('AboutPage')
   },
   {
-    path: '/account',
+    path: 'tower/account',
     name: 'Account',
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
   },
   {
-    path: '/event/:eventId',
+    path: 'tower/event/:eventId',
     name: 'Tower',
     component: loadPage('TowersDetailsPage'),
     beforeEnter: authSettled
